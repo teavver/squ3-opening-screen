@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  entry: { main:'./src/main.ts', connectWallet: './src/connectWallet.ts' },
+  entry: { main:'./src/main.ts', connectToPlay: './src/connectToPlay.ts', connectToMint: './src/connectToMint.ts' },
   mode: 'development',
   module: {
     rules: [
