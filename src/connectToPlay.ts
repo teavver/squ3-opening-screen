@@ -11,3 +11,4 @@ const connectButton: HTMLElement | null = document.querySelector("#connect")
 connectButton?.addEventListener("click", async(e) => {
     web3instance.connectWallet()
 })
+

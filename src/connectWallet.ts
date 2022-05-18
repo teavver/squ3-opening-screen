@@ -15,7 +15,7 @@ export default class Web3Instance{
   web3:Web3
   networkId:number = 0
   testcontract:any
-  myAddress:string = ''
+  myAddress:string | null = ''
 
   public get(){
     return this.web3
@@ -26,10 +26,13 @@ export default class Web3Instance{
     if(ethereum){
       this.web3 = new Web3(ethereum)
       try{
-        await ethereum.enable()
-        const accounts = await this.web3.eth.getAccounts()
+        // await ethereum.enable()
+        // const accounts = await this.web3.eth.getAccounts()
+        const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
         this.myAddress = accounts[0]
         this.networkId = await this.web3.eth.net.getId()
+        document.getElementById('disconnect')?.classList.remove('hidden');
+        this.showAddress(this.myAddress)
         console.log(accounts)
       }catch(error){
         console.error(error)
@@ -37,10 +40,31 @@ export default class Web3Instance{
     }
   }
 
+  public async disconnectWallet(){
+    if(ethereum){
+      try{
+        console.log("disconnected!")
+        this.myAddress = null
+        // await this.web3.window.reload()
+        document.getElementById('disconnect')?.classList.add('hidden');
+      } catch (error){
+        console.log(error)
+      }
+    }
+  }
+
+  public async showAddress(myAddress:string | null){
+    const Address_textfield:  HTMLElement | null = document.querySelector("#connected_address");
+    if (Address_textfield != null){
+      Address_textfield.innerText = `Connected as: ${myAddress}`;
+    }
+  }
+
   public async createContractInterface(){
     const abi = Contract.output.abi
     const contact_address = "0xba07224265144109Cb7fbFC4d90f6A8Ce600F76B"
-    this.testcontract = new this.web3.eth.Contract(abi, contact_address)
+    let test_value:String = ''
+    this.testcontract = new this.web3.eth.Contract(abi, contact_address, test_value)
     
   }
 
@@ -52,7 +76,7 @@ export default class Web3Instance{
   }
 
   public async receiveFromTestContract(){
-    const response = await this.testcontract.methods.retrieve().call() 
+    const response = await this.testcontract.methods.retrieve().call()
     console.log(response)
   }
 

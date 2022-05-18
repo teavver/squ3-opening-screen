@@ -18,7 +18,7 @@ export default function scalingOnScroll(){
     
     window.onscroll = (event) => {
         const x = window.scrollY / 1000;
-        play_btn!.style.transform = `scale(${0.9 - (x/1.4)})`;
+        play_btn!.style.transform = `scale(${0.8 - (x/1.5)})`;
       };
 }
 

@@ -14,13 +14,19 @@ const submit: HTMLElement | null = document.querySelector("#submit")
 
 const input: HTMLInputElement | null = document.querySelector("#input")
 
+const disconnectButton: HTMLElement | null = document.querySelector("#disconnect")
+
+disconnectButton?.addEventListener("click", async(e) => {
+    window.location.reload();
+})
+
 
 submit?.addEventListener("click", async(e) => {
     const inputData = Number(input?.value)
 
     // const inputNumber = input as number
     
-    web3instance.sendToTestContract(inputData)
+    // web3instance.sendToTestContract(inputData)
 })
 
 
@@ -30,9 +36,15 @@ connectButton?.addEventListener("click", async(e) => {
 
     web3instance.createContractInterface()
 
-    web3instance.receiveFromTestContract()
+    // web3instance.receiveFromTestContract()
 
     // const balance = await web3.eth.getBalance('0x1Fb0d6ecb9709b539013C05B6C96201501eE68df')
     // console.log(balance)
 
 })
+
+
+
+// https://imgur.com/a/9l77EcM
+
+// test url for 32x32
