@@ -103,7 +103,12 @@ a:visited{
     width: 50vw;
 }
 #right_content{
-    font-size: 1.5em;
+    margin-left: 10%;
+    width: 100%;
+    font-size: 2em;
+}
+#contractOutput{
+    margin-bottom: 30%;
 }
 
 /* -------------------------------- */
