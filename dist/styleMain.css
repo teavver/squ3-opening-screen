@@ -237,22 +237,22 @@ a:visited{
     max-height: 320px;
     transform:scale(0.2);
     position:absolute;
-    top: 10vh;
+    top: 4vh;
     left: 80vw;
     z-index: 3;
 }
 #nft-image-2{
     transform:scale(0.2);
     position:absolute;
-    top: 30vh;
-    left: 60vw;
+    top: 38vh;
+    left: 62vw;
     z-index:3;
 }
 #nft-image-3{
     transform:scale(0.2);
     position:absolute;
-    top: 56vh;
-    left: 80vw;
+    top: 64vh;
+    left: 82vw;
     z-index:3;
 }
 /* -------------------------------- */
