@@ -1,6 +1,6 @@
 // @ts-ignore
 import Web3 from 'web3/dist/web3.min.js'
-import Contract from '../contract_data/ABI.json'
+import Contract from '../contract_data/ABI_NFT.json'
 
 declare global {
   interface Window {
@@ -38,8 +38,10 @@ export default class Web3Instance{
   }
 
   public async createContractInterface(){
-    const abi = Contract
-    this.testcontract = new this.web3.eth.Contract(abi, "0x01ab63F7A2c08D5Db87d3add98480bff225F1884")
+    const abi = Contract.output.abi
+    const contact_address = "0xba07224265144109Cb7fbFC4d90f6A8Ce600F76B"
+    this.testcontract = new this.web3.eth.Contract(abi, contact_address)
+    
   }
 
   public async sendToTestContract(_input:number){

@@ -94,25 +94,41 @@ a:visited{
 h1{
     font-size: 36px;
 }
-
-#ctn-container{
-    display:flex;
+.mainButton{
+    position:relative;
+    z-index: 100;
+    display: flex;
+    width: 100%;
     justify-content: center;
     align-items: center;
-    position:absolute;
-    height: 100%;
-    width: 100%;
-    background-color: #2D3436;
+    position: absolute;
+    top: 80vh;
 }
-
-#verification-link:link { text-decoration: none; }
-
-
-#verification-link:visited { text-decoration: none; }
-
-
-#verification-link:hover { text-decoration: none; }
-
-
-#verification-link:active { text-decoration: none; }
-
+#connect{
+    position:absolute;
+    font-family : inherit;
+    font-size: 1.5em;
+    border:none;
+    background-color:  #1e3799;
+    border-bottom: 8px solid #0c2461;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+#disconnect{
+    visibility: hidden;
+    font-family : inherit;
+    font-size: 1.5em;
+    border:none;
+    background-color:  #1e3799;
+    border-bottom: 8px solid #0c2461;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}

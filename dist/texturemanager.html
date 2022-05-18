@@ -18,32 +18,37 @@
     </div>
     
     <div id="wrapper">
-        <div id="imgDiv">
+
+        <div class="mainButton">
+            <button id="connect">Connect Wallet</button>
+            <button id="disconnect">Disconnect Wallet</button>
         </div>
-        <div id="importImgDiv">
 
-            <!-- <form action="/action_page.php">
-                <label id="selectImg"for="img">Upload texture:</label>
-                <input type="file" id="img" name="img" accept="image/*">
-                <input type="submit">
-              </form> -->
+        <!-- right page -->
+        <div id="rightPage">
+            <div class="imgDiv"></div>
+            <div id="right_content">
 
-              <h1>Test</h1>
+                  <h1>Test</h1>
+    
+                  <form>
+                    <label for="fname">Input number:</label>
+                    <input type="text" id="input" name="input"><br><br>
+                    <input type="button" id="submit"value="Submit">
+                    <h2>Output:</h2><h2 id="contractOutput"></h2>
+                    <p></p>
+                  </form>
 
-              <form>
-                <label for="fname">Input number:</label>
-                <input type="text" id="input" name="input"><br><br>
-                <input type="button" id="submit"value="Submit">
-                <h2>Output:</h2><h2 id="contractOutput"></h2>
-                <p></p>
-              </form>
-              
-
-            
-              <div id="mainButton">
-                <button id="connect">Connect Wallet</button>
             </div>
         </div>
+
+        <!-- left page -->
+        <div id="leftPage">
+            <div class="imgDiv"></div>
+
+
+        </div>
+        
         
         
     </div>

@@ -90,6 +90,38 @@ a:visited{
 }
 
 /* -------------------------------- */
+/* ------------right_page-----------*/
+
+#rightPage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    top:0;
+    left:50vw;
+    height: 100%;
+    width: 50vw;
+}
+#right_content{
+    font-size: 1.5em;
+}
+
+/* -------------------------------- */
+/* ------------left_page------------*/
+
+#leftPage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 50vw;
+}
+
+
+/* -------------------------------- */
 /* -------------content-------------*/
 h1{
     padding:0;
@@ -104,15 +136,41 @@ h1{
     width: 100%;
     background-color: #2D3436;
 }
-/* #imgDiv{
-    background-color: grey;
-    width: 384px;
-    height: 384px;
-} */
-#importImgDiv{
-    position:absolute;
-    top: 40vh;
+.mainButton{
+    position:relative;
+    z-index: 100;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 80vh;
 }
-#selectImg{
-    font-size: 2em;
+#connect{
+    position:absolute;
+    font-family : inherit;
+    font-size: 1.5em;
+    border:none;
+    background-color:  #1e3799;
+    border-bottom: 8px solid #0c2461;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+#disconnect{
+    visibility: hidden;
+    font-family : inherit;
+    font-size: 1.5em;
+    border:none;
+    background-color:  #1e3799;
+    border-bottom: 8px solid #0c2461;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
 }
