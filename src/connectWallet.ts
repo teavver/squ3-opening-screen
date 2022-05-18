@@ -14,7 +14,7 @@ export default class Web3Instance{
 
   web3:Web3
   networkId:number = 0
-  testcontract:any
+  nftTextureContract:any
   myAddress:string | null = ''
 
   public get(){
@@ -26,16 +26,16 @@ export default class Web3Instance{
     if(ethereum){
       this.web3 = new Web3(ethereum)
       try{
-        // await ethereum.enable()
-        // const accounts = await this.web3.eth.getAccounts()
         const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
         this.myAddress = accounts[0]
         this.networkId = await this.web3.eth.net.getId()
         document.getElementById('disconnect')?.classList.remove('hidden');
         this.showAddress(this.myAddress)
         console.log(accounts)
-      }catch(error){
-        console.error(error)
+      } catch (error:any) {
+        if (error.code === 4001) {
+          console.log("User rejected request")
+        }
       }
     }
   }
@@ -44,8 +44,7 @@ export default class Web3Instance{
     if(ethereum){
       try{
         console.log("disconnected!")
-        this.myAddress = null
-        // await this.web3.window.reload()
+        // this.myAddress = null
         document.getElementById('disconnect')?.classList.add('hidden');
       } catch (error){
         console.log(error)
@@ -61,23 +60,34 @@ export default class Web3Instance{
   }
 
   public async createContractInterface(){
-    const abi = Contract.output.abi
-    const contact_address = "0xba07224265144109Cb7fbFC4d90f6A8Ce600F76B"
-    let test_value:String = ''
-    this.testcontract = new this.web3.eth.Contract(abi, contact_address, test_value)
-    
+    const abi = Contract
+    const contact_address = "0xEcb5f82Aa5B07e6420b0acc58A6843F4eb2Bc97a"
+    this.nftTextureContract = new this.web3.eth.Contract(abi, contact_address)
+
+    this.retrieveTokenURI()
   }
 
-  public async sendToTestContract(_input:number){
-    this.testcontract.methods.store(_input).send({from: this.myAddress})
-    // .on('receipt', function(){
-    //   window.location.reload();
-    // })
+  public async mint(_url:string){
+    console.log(_url)
+    console.log(this.myAddress)
+    this.nftTextureContract.methods.createCollectible(_url).send({from: this.myAddress, value:0})
   }
 
-  public async receiveFromTestContract(){
-    const response = await this.testcontract.methods.retrieve().call()
-    console.log(response)
+  public async retrieveTokenURI(){
+    const ownedTokenId = await this.nftTextureContract.methods.tokenOfOwnerByIndex(this.myAddress, 3).call()
+
+    const tokenURI = await this.nftTextureContract.methods.tokenURI(ownedTokenId).call()
+
+    let image = document.createElement('img')
+    image.src = tokenURI;
+
+    document.getElementById('rightPage')?.appendChild(image);
+
+    // const response = await this.nftTextureContract.methods.tokenURI(2).call()
+    console.log(tokenURI)
+
+
+
   }
 
 

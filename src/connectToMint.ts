@@ -22,8 +22,9 @@ disconnectButton?.addEventListener("click", async(e) => {
 
 
 submit?.addEventListener("click", async(e) => {
-    const inputData = Number(input?.value)
+    const inputData:string = input?.value as string
 
+    web3instance.mint(inputData)
     // const inputNumber = input as number
     
     // web3instance.sendToTestContract(inputData)
@@ -31,10 +32,13 @@ submit?.addEventListener("click", async(e) => {
 
 
 connectButton?.addEventListener("click", async(e) => {
-    web3instance.connectWallet()
+    await web3instance.connectWallet()
     web3 = web3instance.get()
-
     web3instance.createContractInterface()
+
+    
+
+    // web3instance.retrieveTokenURI()
 
     // web3instance.receiveFromTestContract()
 
