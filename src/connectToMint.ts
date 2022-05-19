@@ -2,23 +2,26 @@
 import Web3 from 'web3/dist/web3.min.js'
 import Web3Instance from "./connectWallet"
 
+declare global{
+    interface EventTarget {
+        files:Array<File>
+    }
+}
+
+
 const web3instance:Web3Instance = new Web3Instance()
 let web3:Web3;
-
-
 
 
 const connectButton: HTMLElement | null = document.querySelector("#connect")
 
 const submit: HTMLElement | null = document.querySelector("#submit")
 
-const input: HTMLInputElement | null = document.querySelector("#input")
+// const input: HTMLInputElement | null = document.querySelector("#input")
 
 const disconnectButton: HTMLElement | null = document.querySelector("#disconnect")
 
-const upload_preview: HTMLImageElement | null = document.querySelector("#img_preview")
 
-let uploaded_file:HTMLElement | null = document.querySelector("#file")
 
 
 
@@ -27,14 +30,12 @@ disconnectButton?.addEventListener("click", async(e) => {
 })
 
 
-submit?.addEventListener("click", async(e) => {
-    const inputData:string = input?.value as string
+// submit?.addEventListener("click", async(e) => {
+//     const inputData:string = input?.value as string
 
-    web3instance.mint(inputData)
-    // const inputNumber = input as number
-    
-    // web3instance.sendToTestContract(inputData)
-})
+//     web3instance.mint(inputData)
+
+// })
 
 
 connectButton?.addEventListener("click", async(e) => {
@@ -52,20 +53,35 @@ connectButton?.addEventListener("click", async(e) => {
     // console.log(balance)
 
 })
+// const target = event?.target as HTMLInputElement;
+// const files = target.files;
+
+// to na gorze to napewno nie moze tutaj byc
+
+document.getElementById("photo")!.onchange= function(e: Event) {
+    const file:File = event?.target?.files[0] as File
+
+    const previewImg:HTMLImageElement = document.getElementById('output') as HTMLImageElement 
+
+    previewImg.src = window.URL.createObjectURL(file)
+    
+    const reader = new FileReader();
+    reader.readAsDataURL(file)
+
+    reader.onload = function(evt){
+        console.log(evt.target?.result)
+    }
+   
+}
+
+// document.getElementById("photo")?.addEventListener("change", evt => getBase64(e: Event))
+
+// let inputPhoto = (<HTMLInputElement>e.target).files[0];
 
 
+ 
 
-
-// function showPreview(event: Event & { target: HTMLInputElement }) {
-//     console.log("trying to preview")
-//     if (event.target.files.length > 0) {
-//       let src:any = URL.createObjectURL(event.target.files[0]);
-//       let preview:any  = document.getElementById("preview");
-//       preview.src = src;
-//       preview.style.display = "block";
-//     }
-//   }
-
+//  getBase64(file); // prints the base64 string
 
 
 // https://imgur.com/a/9l77EcM
