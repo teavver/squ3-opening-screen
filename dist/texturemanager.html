@@ -25,46 +25,41 @@
             <p id="connected_address">Address:</p>
         </div>
 
-        <!-- right page -->
-        <div id="rightPage">
-            <div class="imgDiv"></div>
-            <div id="right_content">
-                <h2>Preview:</h2><h2 id="contractOutput"></h2>
+        <div id="Page">
+            <div id="page_content">
                 
+                <div id="contractOutput"></div>
+                  <!-- <h1>Custom Spritesheet</h1> -->
 
-                  <h1>Custom Spritesheet</h1>
+
+                  <div id="formDiv">
+                    <form class="nftForm" runat="server">
+                        <p class="nftFormName">Enter skin name:</p>
+                        <input class="nftForm" accept="text">
+                        <p class="nftFormName">Choose file:</p>
+                      <!-- <input class="nftForm" accept="image/*" type='file' id="img_preview" />
+                      <p class="nftFormName"></p> -->
+
+                      <img id="output" src="" width="100" height="100">
+
+                      <input name="photo" type="file" accept="image/*" onchange="document.getElementById('output').src = window.URL.createObjectURL(this.files[0])">
+
+                      <input class="nftForm" type="submit">
+                    </form>
+  
+                  </div>
                   
-                  <form>
-                    <label for="name">Upload spritesheet URL:</label>
-                    <input type="text" id="input" name="input"><br><br>
-                    <input type="button" id="preview" value="Preview">
-                    <input type="button" id="submit"value="Submit">
-                    <p></p>
-                  </form>
+
+                  <div id="previewDiv">
+                    <div id="previewImg">
+
+                    </div>
+                  </div>
+                 
 
             </div>
         </div>
 
-        <!-- left page -->
-        <div id="leftPage">
-            <div class="imgDiv"></div>
-            <div id="left_content">
-
-                <!-- <h1>Player Spritesheet</h1>
-    
-                  <form>
-                    <label for="name">Upload texture URL:</label>
-                    <input type="text" id="input" name="input"><br><br>
-                    <input type="button" id="submit"value="Submit">
-                    <h2>Output:</h2><h2 id="contractOutput"></h2>
-                    <p></p>
-                  </form> -->
-
-
-            </div>
-
-        </div>
-        
         
         
     </div>

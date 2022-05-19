@@ -8,7 +8,7 @@ export default function scalingOnScroll(){
         $('#page1-arrow').css({
           opacity: function() {
             var elementHeight:number = $(this).height() as number;
-            return 0 + (elementHeight - scrollTop/2) / elementHeight;
+            return 0 + (elementHeight - scrollTop/2.5) / elementHeight;
           }
         });
       });
@@ -22,14 +22,18 @@ export default function scalingOnScroll(){
     
     window.onscroll = (event) => {
         const x = window.scrollY / 1000;
-        play_btn!.style.transform = `scale(${0.8 - (x/1.5)})`;
 
-        nft_1!.style.transform = `scale(${0.2 + x/2})`;
-        console.log(window.scrollY)
-        nft_2!.style.transform = `scale(${0.2 + x/2})`;
-        console.log(window.scrollY)
-        nft_3!.style.transform = `scale(${0.2 + x/2})`;
-        console.log(window.scrollY)
+        if(window.scrollY >= 1000){
+          nft_1!.style.transform = `scale($0.38)`
+        }
+
+        if(window.scrollY < 1000){
+          play_btn!.style.transform = `scale(${0.8 - (x/1.5)})`;
+
+          nft_1!.style.transform = `scale(${0.2 + x/2})`;
+          nft_2!.style.transform = `scale(${0.2 + x/2})`;
+          nft_3!.style.transform = `scale(${0.2 + x/2})`;
+        }
       };
 
 

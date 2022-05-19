@@ -44,7 +44,6 @@ export default class Web3Instance{
     if(ethereum){
       try{
         console.log("disconnected!")
-        // this.myAddress = null
         document.getElementById('disconnect')?.classList.add('hidden');
       } catch (error){
         console.log(error)
@@ -74,17 +73,19 @@ export default class Web3Instance{
   }
 
   public async retrieveTokenURI(){
-    const ownedTokenId = await this.nftTextureContract.methods.tokenOfOwnerByIndex(this.myAddress, 3).call()
+    // const ownedTokenId = await this.nftTextureContract.methods.tokenOfOwnerByIndex(this.myAddress, 3).call()
 
-    const tokenURI = await this.nftTextureContract.methods.tokenURI(ownedTokenId).call()
+    // const tokenURI = await this.nftTextureContract.methods.tokenURI(ownedTokenId).call()
 
-    let image = document.createElement('img')
-    image.src = tokenURI;
+    // let image = document.createElement('img')
+    // image.src = tokenURI;
 
-    document.getElementById('rightPage')?.appendChild(image);
+    // document.getElementById('page_content')?.appendChild(image);
+    // image.style.transform = `scale(0.1)`
+    
 
     // const response = await this.nftTextureContract.methods.tokenURI(2).call()
-    console.log(tokenURI)
+    // console.log(tokenURI)
 
 
 

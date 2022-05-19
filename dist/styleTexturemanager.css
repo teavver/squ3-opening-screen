@@ -90,52 +90,52 @@ a:visited{
 }
 
 /* -------------------------------- */
-/* ------------right_page-----------*/
-
-#rightPage{
+/* ---------------page-- -----------*/
+#Page{
+    position:absolute;
+    height: 100vh;
+    width: 100vw;
+}
+#page_content{
+    position:absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    position:absolute;
-    top:0;
-    left:50vw;
-    height: 100%;
+    left: 25vw;
+    right: 25vw;
+    height: 100vh;
     width: 50vw;
-}
-#right_content{
-    margin-left: 10%;
-    width: 100%;
+    max-height: 100vh;
+    max-width: 50vw;
     font-size: 2em;
+    padding:0;
+    margin:0;
 }
 #contractOutput{
-    margin-bottom: 30%;
-}
+    max-width: 360px;
+    max-height: 360px;
+    margin:0;
+    padding:0;
 
-/* -------------------------------- */
-/* ------------left_page------------*/
-
-#leftPage{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position:absolute;
-    top:0;
-    left:0;
-    height: 100%;
-    width: 50vw;
 }
 
 
 /* -------------------------------- */
 /* -------------content-------------*/
 h1{
+    font-size: 32px;
     padding:0;
     margin:0;
 }
+#formDiv{
+    padding: 20px;
+    position:absolute;
+    height: auto;
+    width: auto;
+    background-color:  #1e3799;
+    border-bottom: 8px solid #0c2461;
+}
 #wrapper{
-    display:flex;
-    justify-content: center;
-    align-items: center;
     position:absolute;
     height: 100%;
     width: 100%;
@@ -189,4 +189,17 @@ h1{
 }
 .hidden{
     visibility:hidden;
+}
+.nftForm{
+    display:grid;
+    row-gap: 2vh;
+}
+.nftFormName{
+ margin:0;
+ padding:0;
+ font-size: 1.5rem;   
+}
+#output{
+    margin-left: 30%;
+    margin-right: 30%;
 }

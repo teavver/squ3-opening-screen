@@ -233,8 +233,8 @@ a:visited{
 /* ------------nft-imgs-------------*/
 
 #nft-image-1{
-    max-width: 320px;
-    max-height: 320px;
+    /* max-width: 320px;
+    max-height: 320px; */
     transform:scale(0.2);
     position:absolute;
     top: 4vh;

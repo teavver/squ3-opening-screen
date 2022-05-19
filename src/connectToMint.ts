@@ -16,6 +16,12 @@ const input: HTMLInputElement | null = document.querySelector("#input")
 
 const disconnectButton: HTMLElement | null = document.querySelector("#disconnect")
 
+const upload_preview: HTMLImageElement | null = document.querySelector("#img_preview")
+
+let uploaded_file:HTMLElement | null = document.querySelector("#file")
+
+
+
 disconnectButton?.addEventListener("click", async(e) => {
     window.location.reload();
 })
@@ -49,6 +55,17 @@ connectButton?.addEventListener("click", async(e) => {
 
 
 
-// https://imgur.com/a/9l77EcM
 
-// test url for 32x32
+// function showPreview(event: Event & { target: HTMLInputElement }) {
+//     console.log("trying to preview")
+//     if (event.target.files.length > 0) {
+//       let src:any = URL.createObjectURL(event.target.files[0]);
+//       let preview:any  = document.getElementById("preview");
+//       preview.src = src;
+//       preview.style.display = "block";
+//     }
+//   }
+
+
+
+// https://imgur.com/a/9l77EcM
