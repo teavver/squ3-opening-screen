@@ -3,10 +3,20 @@ import $ from "jquery"
 
 export default function scalingOnScroll(){
     $(window).scroll(function() {
+      
         var scrollTop:number = $(this).scrollTop() as number;
+        // console.log(scrollTop)
     
         $('#page1-arrow').css({
           opacity: function() {
+
+            if(scrollTop > 100 && window.scrollY < 250){
+              arrow_btn!.style.transform = `scale(0)`
+            }
+            if(scrollTop < 35){
+              arrow_btn!.style.transform = `scale(1)`
+            }
+
             var elementHeight:number = $(this).height() as number;
             return 0 + (elementHeight - scrollTop/2.5) / elementHeight;
           }
@@ -16,6 +26,7 @@ export default function scalingOnScroll(){
 
     // scroll scale function for play button
     const play_btn: HTMLElement | null = document.getElementById('play-btn')
+    const arrow_btn: HTMLElement | null = document.getElementById('page1-arrow')
     const nft_1: HTMLElement | null = document.getElementById('nft-image-1')
     const nft_2: HTMLElement | null = document.getElementById('nft-image-2')
     const nft_3: HTMLElement | null = document.getElementById('nft-image-3')
@@ -25,6 +36,7 @@ export default function scalingOnScroll(){
 
         if(window.scrollY >= 1000){
           nft_1!.style.transform = `scale($0.38)`
+          play_btn!.style.transform = `scale(0)`
         }
 
         if(window.scrollY < 1000){
