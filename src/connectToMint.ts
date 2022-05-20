@@ -14,8 +14,6 @@ interface formRequest {
 
 let formInp : formRequest = JSON.parse('{ "name": "", "base64": "" }');
 
-
-
 const web3instance:Web3Instance = new Web3Instance()
 let web3:Web3;
 
@@ -71,14 +69,6 @@ connectButton?.addEventListener("click", async(e) => {
     // console.log(balance)
 
 })
-// const target = event?.target as HTMLInputElement;
-// const files = target.files;
-
-// to na gorze to napewno nie moze tutaj byc
-
-// document.getElementById("txtName")!.onchange = function(e: Event) {
-//     let texturename:String = 
-// }
 
 document.getElementById("photo")!.onchange= function(e: Event) {
     const file:File = event?.target?.files[0] as File
@@ -96,9 +86,3 @@ document.getElementById("photo")!.onchange= function(e: Event) {
     }
    
 }
-
-// console.log(formInp.name)
-// console.log(formInp.base64)
-
-
-// https://imgur.com/a/9l77EcM
