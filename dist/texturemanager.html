@@ -35,7 +35,7 @@
                   <div id="formDiv">
                     <form class="nftForm" runat="server">
                         <p class="nftFormName">Enter skin name:</p>
-                        <input class="nftForm" accept="text">
+                        <input class="nftForm" id="txtName"accept="text">
                         <p class="nftFormName">Choose file:</p>
                       <!-- <input class="nftForm" accept="image/*" type='file' id="img_preview" />
                       <p class="nftFormName"></p> -->
@@ -44,8 +44,8 @@
 
                       <input id="photo" type="file" accept="image/*">
 
-                      <input class="nftForm" type="submit">
-                      <p id="b64">b64</p>
+                      <input class="nftForm" id="submit" type="submit" value="Submit Form">
+                      <div id="result"></div>
                     </form>
   
                   </div>

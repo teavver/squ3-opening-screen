@@ -7,6 +7,13 @@ declare global{
         files:Array<File>
     }
 }
+interface formRequest {
+    name?: string;
+    base64?: string;
+}
+
+let formInp : formRequest = JSON.parse('{ "name": "", "base64": "" }');
+
 
 
 const web3instance:Web3Instance = new Web3Instance()
@@ -15,27 +22,38 @@ let web3:Web3;
 
 const connectButton: HTMLElement | null = document.querySelector("#connect")
 
-const submit: HTMLElement | null = document.querySelector("#submit")
-
-// const input: HTMLInputElement | null = document.querySelector("#input")
-
 const disconnectButton: HTMLElement | null = document.querySelector("#disconnect")
 
+const submit: HTMLElement | null = document.querySelector("#submit")
 
 
+const texturename: HTMLElement | null = document.querySelector("#txtName")
 
+const result: HTMLElement | null = document.querySelector("#result")
+
+const inputHandler = function(e:any) {
+    // display current txtname in div
+    // result!.innerText = e.target.value;
+    formInp.name = e.target.value
+    // display current name (last keyboard input)
+    console.log(formInp.name)
+  }
+  
+  texturename?.addEventListener('input', inputHandler);
 
 disconnectButton?.addEventListener("click", async(e) => {
     window.location.reload();
 })
 
 
-// submit?.addEventListener("click", async(e) => {
-//     const inputData:string = input?.value as string
+submit?.addEventListener("click", async(e) => {
+    e.preventDefault()
+    console.log(formInp)
 
-//     web3instance.mint(inputData)
+    // const inputData:string = input?.value as string
+    // web3instance.mint(inputData)
 
-// })
+})
 
 
 connectButton?.addEventListener("click", async(e) => {
@@ -58,6 +76,10 @@ connectButton?.addEventListener("click", async(e) => {
 
 // to na gorze to napewno nie moze tutaj byc
 
+// document.getElementById("txtName")!.onchange = function(e: Event) {
+//     let texturename:String = 
+// }
+
 document.getElementById("photo")!.onchange= function(e: Event) {
     const file:File = event?.target?.files[0] as File
 
@@ -68,20 +90,15 @@ document.getElementById("photo")!.onchange= function(e: Event) {
     const reader = new FileReader();
     reader.readAsDataURL(file)
 
-    reader.onload = function(evt){
-        console.log(evt.target?.result)
+    reader.onload = function(evt:any){
+        // console.log(evt.target?.result)
+        formInp.base64 = evt.target?.result
     }
    
 }
 
-// document.getElementById("photo")?.addEventListener("change", evt => getBase64(e: Event))
-
-// let inputPhoto = (<HTMLInputElement>e.target).files[0];
-
-
- 
-
-//  getBase64(file); // prints the base64 string
+// console.log(formInp.name)
+// console.log(formInp.base64)
 
 
 // https://imgur.com/a/9l77EcM
