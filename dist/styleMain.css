@@ -181,7 +181,7 @@ a:visited{
 #page2main{
     font-size:0;
 }
-#page2bgDiv{
+#page2-bgDiv{
     position: absolute;
     height: 100vh;
     width: 100vw;
@@ -202,7 +202,7 @@ a:visited{
 }
 #page2title{
     text-shadow: 2px 2px #2b2b2b;
-    left: 2%;
+    left: 5vw;
     font-weight: bold;
     padding:0;
     margin:0;
@@ -216,7 +216,7 @@ a:visited{
 }
 .page2maintext{
     text-shadow: 2px 2px #2b2b2b;
-    left: 2%;
+    left: 5vw;
     padding:0;
     margin:0;
     position: absolute;
@@ -224,6 +224,49 @@ a:visited{
     bottom: 25vh;
     width: 50%;
     height: 50%;
+    font-size: 40px;
+    color: white;
+    z-index:3;
+}
+
+/* -------------------------------- */
+/* -------------page3---------------*/
+
+#page3main{
+    pointer-events:none;
+    margin-top: 100vh;
+    font-size:0;
+}
+#page3bgDiv{
+    border-top: 1px solid black;
+    top: 200vh;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    padding:0;
+}
+#page3bgImg{
+    z-index:1;
+    pointer-events:none;
+    position:absolute;
+    height: 100vh;
+    width: 100vw;
+}
+#content3-ctn{
+    display: flex;
+    position:absolute;
+    height: 100%;
+    width: 100%;
+}
+#page3mainText{
+    position:absolute;
+}
+#page3h1{
+    text-shadow: 2px 2px #2b2b2b;
+    left: 2%;
+    padding:0;
+    margin:0;
+    position: absolute;
     font-size: 40px;
     color: white;
     z-index:3;
@@ -254,26 +297,4 @@ a:visited{
     top: 64vh;
     left: 82vw;
     z-index:3;
-}
-/* -------------------------------- */
-/* -------------page3---------------*/
-
-#page3main{
-    font-size:0;
-    z-index: 10;
-}
-#page3bgImg{
-    z-index: 2;
-    padding-top: 100vh;
-    position:absolute;
-    height: 100vh;
-    width: 100vw;
-    pointer-events:none;
-}
-
-/*---------------*/
-#connect{
-    z-index: 10000000;
-    width: 100px;
-    height: 50px;
 }

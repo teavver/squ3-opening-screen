@@ -21,6 +21,11 @@ body, html
 /* ------------animations-----------*/
 
 #wrapper-main{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
     animation: fadeInAnimation ease 1s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
@@ -95,16 +100,17 @@ h1{
     font-size: 36px;
 }
 .mainButton{
-    position:relative;
+    position:absolute;
     z-index: 100;
     display: flex;
     width: 100%;
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 80vh;
+    top: 50vh;
 }
 #connect{
+    z-index: 100;
     position:absolute;
     font-family : inherit;
     font-size: 1.5em;
@@ -118,15 +124,26 @@ h1{
     display: inline-block;
     cursor: pointer;
 }
-#disconnect{
-    visibility: hidden;
+.hidden{
+    visibility:hidden;
+}
+#mainButton{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#playbutton{
+    z-index: 101;
+    position:absolute;
     font-family : inherit;
-    font-size: 1.5em;
+    font-size: 3em;
     border:none;
     background-color:  #1e3799;
     border-bottom: 8px solid #0c2461;
     color: white;
-    padding: 15px 32px;
+    padding: 15px 100px;
     text-align: center;
     text-decoration: none;
     display: inline-block;

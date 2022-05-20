@@ -30,6 +30,7 @@ export default class Web3Instance{
         this.myAddress = accounts[0]
         this.networkId = await this.web3.eth.net.getId()
         document.getElementById('disconnect')?.classList.remove('hidden');
+        document.getElementById('playbutton')?.classList.remove('hidden');
         this.showAddress(this.myAddress)
         console.log(accounts)
       } catch (error:any) {
