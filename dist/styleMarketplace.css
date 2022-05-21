@@ -16,6 +16,9 @@ body, html
     font-style: normal;
     color: rgb(255, 255, 255);
 }
+#grid-container::-webkit-scrollbar {
+    display: none;
+  }
 
 /* -------------------------------- */
 /* ------------animations-----------*/
@@ -101,59 +104,61 @@ a:visited{
     color: white;
 }
 
-/* -------------------------------- */
-/* -------------content-------------*/
 
-h1{
-    font-size: 36px;
-}
-.mainButton{
-    position:absolute;
-    z-index: 100;
+/* ---------- GRID LAYOUT ---------- */
+#marketplace-container-border{
     display: flex;
+    padding: 2vh 1vw 2vh 1vw;
+    z-index: 10000;
+    background-color: #202124;
+}
+#marketplace-container-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 50vh;
+    margin-top: 4vh;
+    background-color:#1e3799;
 }
-#connect{
-    z-index: 100;
-    position:absolute;
-    font-family : inherit;
-    font-size: 1.5em;
-    border:none;
-    background-color:  #1e3799;
-    border-bottom: 8px solid #0c2461;
+.marketplace-ctn-text{
     color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    cursor: pointer;
+    font-size: 2em;
+    margin: 0;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    
 }
-.hidden{
-    visibility:hidden;
+#marketplace-container{
+    /* z-index: 1000; */
+    /* position:absolute; */
+    width: 60vw;
+    height: 80vh;
+    /* background: white; */
 }
-#mainButton{
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+
+#grid-container{
+    padding:0;
+    margin:0;
+    /* margin-top: 40px; */
+    background-color: #202124;
+    /* padding-right: 2vw; */
+    /* padding-left: 2vw; */
+    /* padding-top: 6vh; */
+    /* padding-bottom: 6vh; */
+    height: 80vh;
+    width: 60vw;
+    color:white;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 2vh 1vw;
+    overflow: auto;
+
 }
-#playbutton{
-    z-index: 101;
-    position:absolute;
-    font-family : inherit;
-    font-size: 3em;
-    border:none;
-    background-color:  #1e3799;
-    border-bottom: 8px solid #0c2461;
-    color: white;
-    padding: 15px 100px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    cursor: pointer;
+.grid-item{
+    display:inline-grid;
+    
+    height: 256px;
+    width: 100%;
+    background-color: #34383b;
 }

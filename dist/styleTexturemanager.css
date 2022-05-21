@@ -39,7 +39,7 @@ body, html
 /* -------------------------------- */
 /* --------------navbar-------------*/
 #footer {
-    z-index: 1001;
+    z-index: 100;
     min-width: 640px;
     display: grid;
     justify-content: center; 
@@ -77,6 +77,14 @@ body, html
 #li_play{
     margin-right:2%;
     float:right;
+}
+#li_marketplace{
+    margin-left: 14%;
+    float:none;
+}
+#li_readmore{
+    float:right;
+    margin-right: 20%;
 }
 a{
     font-size: 1.5em;

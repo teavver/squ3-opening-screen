@@ -6,10 +6,6 @@ const web3instance:Web3Instance = new Web3Instance()
 let web3:Web3;
 // const web3:Web3 = web3instance.get()
 
-// window.onload = function() {
-//     isWalletConnected = false
-// }
-
 let isWalletConnected: boolean = false
 
 const connectButton: HTMLElement | null = document.querySelector("#connect")
@@ -25,11 +21,6 @@ connectButton?.addEventListener("click", async(e) => {
     await web3instance.connectWallet()
     web3 = web3instance.get()
     web3instance.createContractInterface()
-    // isWalletConnected = true
-    // console.log(isWalletConnected)
-
-    
-
     
 
     // web3instance.retrieveTokenURI()

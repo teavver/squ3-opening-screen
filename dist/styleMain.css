@@ -79,6 +79,14 @@ body, html {
     margin-right:2%;
     float:right;
 }
+#li_marketplace{
+    margin-left: 14%;
+    float:none;
+}
+#li_readmore{
+    float:right;
+    margin-right: 20%;
+}
 a{
     font-size: 1.5em;
 }
@@ -91,6 +99,9 @@ a:visited{
 
 /* -------------------------------- */
 /* ------------play button----------*/
+.disable-click{
+    pointer-events: none;
+}
 
 #play-ctn{
     z-index: 1;
@@ -142,7 +153,7 @@ a:visited{
 }
 #page1_grass{
     pointer-events:none;
-    z-index:3;
+    z-index:300;
     position:absolute;
     top:0;
     height: 100vh;
@@ -157,7 +168,6 @@ a:visited{
     width: 100vw;
 }
 #page1-arrowDiv{
-    /* pointer-events:none; */
     display:flex;
     justify-content: center;
     align-items: center;
@@ -171,7 +181,7 @@ a:visited{
     position:absolute;
     height: 48px;
     width: 48px;
-    left: 47.6vw;
+    left: 49vw;
     top: 90vh;
 }
 
@@ -271,6 +281,12 @@ a:visited{
     color: white;
     z-index:3;
 }
+/* #squ3{
+    z-index: 1000;
+    transform: scale(0.1);
+    position:absolute;
+} */
+
 
 /* -------------------------------- */
 /* ------------nft-imgs-------------*/

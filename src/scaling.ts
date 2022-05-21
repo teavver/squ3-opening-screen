@@ -1,11 +1,17 @@
 import $ from "jquery"
 // scroll opacity function for arrow
 
+$(document).ready(function(){
+  $(document).scrollTop(0);
+  // $('html,body').scrollTop(0);
+});
+
 export default function scalingOnScroll(){
+
     $(window).scroll(function() {
       
-        var scrollTop:number = $(this).scrollTop() as number;
-        // console.log(scrollTop)
+      var scrollTop:number = $(this).scrollTop() as number;
+        console.log(scrollTop)
     
         $('#page1-arrow').css({
           opacity: function() {
@@ -37,6 +43,13 @@ export default function scalingOnScroll(){
         if(window.scrollY >= 1000){
           nft_1!.style.transform = `scale($0.38)`
           play_btn!.style.transform = `scale(0)`
+          // document.getElementById('disconnect')?.classList.remove('hidden');
+        }
+        if(window.scrollY >= 605) {
+          play_btn!.classList.add('disable-click')
+        }
+        if(window.scrollY < 605 ){
+          play_btn!.classList.remove('disable-click')
         }
 
         if(window.scrollY < 1000){
