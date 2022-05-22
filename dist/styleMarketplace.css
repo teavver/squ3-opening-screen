@@ -103,12 +103,48 @@ a:link {
 a:visited{
     color: white;
 }
+/* ---------- marketplace-items ------*/
+.grid-item-img{
+    display: grid;
+    height: 128px;
+}
+.marketplace-preview-img{
+    height: 120px;
+    width: 120px;
+    align-self: center;
+    justify-self: center;
+}
+.grid-item-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+}
+.grid-item-buyCtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 42px;
+}
+.grid-item-button{
+    width: 200px;
+    height: 36px;
+}
+.grid-item-priceCtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+}
+.grid-item-priceText{
+    font-size: 26px;
+}
 
 
 /* ---------- GRID LAYOUT ---------- */
 #marketplace-container-border{
     display: flex;
-    padding: 2vh 1vw 2vh 1vw;
+    padding: 1.5vh 2vw 1.5vh 2vw;
     z-index: 10000;
     background-color: #202124;
 }
@@ -117,15 +153,18 @@ a:visited{
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-top: 4vh;
+    margin-top: 5vh;
+    padding-bottom: 10px;
+    padding-top: 10px;
     background-color:#1e3799;
+    font-weight: bold;
 }
 .marketplace-ctn-text{
     color: white;
     font-size: 2em;
     margin: 0;
-    padding-top: 1vh;
-    padding-bottom: 1vh;
+    /* padding-top: 0.5vh;
+    padding-bottom: 0.5vh; */
     
 }
 #marketplace-container{
@@ -147,18 +186,21 @@ a:visited{
     /* padding-top: 6vh; */
     /* padding-bottom: 6vh; */
     height: 80vh;
-    width: 60vw;
     color:white;
     display: grid;
     grid-template-columns: auto auto auto auto;
-    gap: 2vh 1vw;
+    gap: 2vh 2vw;
     overflow: auto;
 
 }
 .grid-item{
     display:inline-grid;
-    
     height: 256px;
-    width: 100%;
+    width: 256px;
     background-color: #34383b;
+}
+p{
+    font-size: 1em;
+    padding: 0;
+    margin: 0;
 }
