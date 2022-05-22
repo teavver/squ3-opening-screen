@@ -39,7 +39,7 @@ body, html {
 
 /* -------------------------------- */
 /* --------------navbar-------------*/
-#footer {
+#header {
     z-index: 1001;
     min-width: 640px;
     display: grid;
@@ -211,7 +211,7 @@ a:visited{
     width: 100%;
 }
 #page2title{
-    text-shadow: 2px 2px #2b2b2b;
+    text-shadow: 4px 4px #2b2b2b;
     font-weight: bold;
     font-size: 48px;
     color: white;
@@ -220,7 +220,7 @@ a:visited{
     padding:0;
     margin:0;
     position: absolute;
-    top: 20vh;
+    top: 24vh;
     bottom: 70vh;
     width: 50%;
 }
@@ -233,7 +233,7 @@ a:visited{
 } */
 .page2maintext{
     line-height: 110%;
-    /* text-shadow: 4px 4px #2b2b2b; */
+    text-shadow: 4px 4px #2b2b2b;
     left: 5vw;
     padding:0;
     margin:0;
@@ -248,7 +248,7 @@ a:visited{
 }
 .page2subtext{
     line-height: 125%;
-    /* text-shadow: 4px 4px #2b2b2b; */  
+    text-shadow: 4px 4px #2b2b2b;
     left: 5vw;
     padding:0;
     margin:0;
@@ -288,41 +288,41 @@ a:visited{
 }
 #content3-ctn{
     display: flex;
+    justify-content: center;
+    align-items: center;
     position:absolute;
     height: 100%;
     width: 100%;
 }
 #page3mainText{
+    z-index: 3;
+    display: flex;
+    top: 14vh;
+    justify-content: center;
+    align-items: center;
+    /* width: 15vw;
+    height: 10vh; */
     position:absolute;
 }
 #page3h1{
-    text-shadow: 2px 2px #2b2b2b;
-    left: 10vw;
+    z-index: 3;
     position: absolute;
-    font-size: 40px;
+    text-shadow: 2px 2px #2b2b2b;
     color: white;
-    z-index:3;
+    font-size: 4rem;
 }
-#portal-img{
+/* #portal-img{
     z-index: 20;
     position:absolute;
     top:50vh;
     left: 50vw;
     transform: scale(4)
-}
-/* #squ3{
-    z-index: 1000;
-    transform: scale(0.1);
-    position:absolute;
 } */
-
 
 /* -------------------------------- */
 /* ------------nft-imgs-------------*/
 
 #nft-image-1{
-    /* max-width: 320px;
-    max-height: 320px; */
     transform:scale(0.2);
     position:absolute;
     top: 4vh;
@@ -343,3 +343,18 @@ a:visited{
     left: 82vw;
     z-index:3;
 }
+
+/* -------------------------------- */
+/* ------------footer---------------*/
+
+.footer {
+    z-index: 300;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 20vh;
+    background-color: #202124;
+    color: white;
+    text-align: center;
+  }
