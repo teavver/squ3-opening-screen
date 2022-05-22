@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleTexturemanager.css">
+    <link rel="icon" href="./assets/icon.png">
+    <title>Texture Manager | Squ3</title>
+</head>
+<body>
+    <div id="header">
+        <div id="navbar" class="list">
+            <a id="li_home"  href="texturemanager.html">Texture Manager</a>
+            <a id="li_game" href="index.html">Squ3</a>
+            <a id="li_play" href="game.html">Play</a>
+            <a id="li_marketplace" href="marketplace.html">Marketplace</a>
+            <a id="li_readmore" href="readmore.html">Read More</a>
+       </div>
+    </div>
+    
+    <div id="wrapper">
+
+        <div class="mainButton">
+            <button id="connect">Connect Wallet</button>
+            <button id="disconnect" class='hidden' >Disconnect Wallet</button>
+            <p id="connected_address">Address:</p>
+        </div>
+
+        <div id="Page">
+            <div id="page_content">
+                
+                <div id="contractOutput"></div>
+                  <!-- <h1>Custom Spritesheet</h1> -->
+
+
+                  <div id="formDiv">
+                    <form class="nftForm" runat="server">
+                        <p class="nftFormName">Enter skin name:</p>
+                        <input class="nftForm" id="txtName"accept="text">
+                        <p class="nftFormName">Choose texture file:</p>
+                      <!-- <input class="nftForm" accept="image/*" type='file' id="img_preview" />
+                      <p class="nftFormName"></p> -->
+                      <input id="photo" type="file" accept="image/*">
+
+                      <img id="output" onerror="this.style.display='none'" width="100" height="100">
+
+                      
+
+                      <input class="nftForm" id="submit" type="submit" value="Submit">
+                      <div id="result"></div>
+                    </form>
+  
+                  </div>
+                  
+
+                  <div id="previewDiv">
+                    <div id="previewImg">
+
+                    </div>
+                  </div>
+                 
+
+            </div>
+        </div>
+
+        
+        
+    </div>
+    
+    <script src="./connectToMint.js"></script>
+</body>
+</html>
