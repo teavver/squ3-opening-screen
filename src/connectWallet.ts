@@ -59,6 +59,10 @@ export default class Web3Instance{
     }
   }
 
+  public getMyAddress():string{
+    return this.myAddress as string
+  }
+
   public async createContractInterface(){
     const abi = Contract
     const contact_address = "0xEcb5f82Aa5B07e6420b0acc58A6843F4eb2Bc97a"

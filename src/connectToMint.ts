@@ -9,6 +9,7 @@ declare global{
 }
 interface formRequest {
     name?: string;
+    creator: string
     base64?: string;
 }
 
@@ -44,9 +45,27 @@ disconnectButton?.addEventListener("click", async(e) => {
 })
 
 
+
 submit?.addEventListener("click", async(e) => {
     e.preventDefault()
     console.log(formInp)
+
+    formInp.creator = 'me'
+
+    const imgSize = (formInp.base64!.length * (3/4)) - 2
+
+    if(imgSize < 20000){
+        const rawRes = await fetch('http://localhost:3000/mint', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formInp)
+        })
+    }
+
+    console.log(imgSize)
 
     // const inputData:string = input?.value as string
     // web3instance.mint(inputData)

@@ -211,7 +211,7 @@ a:visited{
     width: 100%;
 }
 #page2title{
-    text-shadow: 4px 4px #2b2b2b;
+    text-shadow: 4px 4px rgb(17, 17, 17);
     font-weight: bold;
     font-size: 48px;
     color: white;
@@ -233,7 +233,7 @@ a:visited{
 } */
 .page2maintext{
     line-height: 110%;
-    text-shadow: 4px 4px #2b2b2b;
+    text-shadow: 4px 4px rgb(17, 17, 17);
     left: 5vw;
     padding:0;
     margin:0;
@@ -248,7 +248,7 @@ a:visited{
 }
 .page2subtext{
     line-height: 125%;
-    text-shadow: 4px 4px #2b2b2b;
+    text-shadow: 4px 4px rgb(17, 17, 17);
     left: 5vw;
     padding:0;
     margin:0;
@@ -272,7 +272,8 @@ a:visited{
     font-size:0;
 }
 #page3bgDiv{
-    border-top: 1px solid black;
+    /* border-top: 1px solid black; */
+    
     top: 200vh;
     position: absolute;
     height: 100vh;
@@ -296,8 +297,8 @@ a:visited{
 }
 #page3mainText{
     z-index: 3;
+    top: 20vh;
     display: flex;
-    top: 14vh;
     justify-content: center;
     align-items: center;
     /* width: 15vw;
@@ -307,10 +308,36 @@ a:visited{
 #page3h1{
     z-index: 3;
     position: absolute;
-    text-shadow: 2px 2px #2b2b2b;
+    text-shadow: 2px 2px rgb(17, 17, 17);
     color: white;
     font-size: 4rem;
+    text-align: center;
 }
+#page3h2{
+    text-align: center;
+    top: 10vh;
+    width: 620px;
+    z-index: 3;
+    position: absolute;
+    text-shadow: 2px 2px rgb(17, 17, 17);
+    color: white;
+    font-size: 2rem;
+}
+/*------ frontmans ------*/
+#page3-frontmans-div{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 30vh;
+    height: 128px;
+    width: 768px;
+}
+#frontmans-img{
+    height: 128px;
+    width: 768px;
+}
+
 /* #portal-img{
     z-index: 20;
     position:absolute;
@@ -348,13 +375,53 @@ a:visited{
 /* ------------footer---------------*/
 
 .footer {
-    z-index: 300;
-    position: relative;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 20vh;
-    background-color: #202124;
-    color: white;
-    text-align: center;
+      z-index: 31;
+      position: relative;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 140px;
+      background-color: #202124;
+      color: white;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  #footer-main-content{
+      width: 90%;
+      height: 80%;
+  }
+  #footer-main-logo{
+      top: 30%;
+      position: absolute;
+  }
+  #footer-small-logo{
+      height: 48px;
+      width: 128px;
+  }
+  #footer-end-content{
+      z-index: 32;
+      position: relative;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 32px;
+      background-color: #0f1011;
+      color: white;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  #trademark2022{
+      padding-left: 1.5vw;
+      padding-right: 1vw;
+      margin: 0;
+  }
+  .footer-end-list{
+      padding-right: 1vw;
+      font-size: 16px;
+      text-decoration: none;
+      list-style: none
   }

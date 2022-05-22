@@ -11,7 +11,7 @@ export default function scalingOnScroll(){
     $(window).scroll(function() {
       
       var scrollTop:number = $(this).scrollTop() as number;
-        console.log(scrollTop)
+        // console.log(scrollTop)
     
         $('#page1-arrow').css({
           opacity: function() {
