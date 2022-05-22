@@ -59,13 +59,10 @@ export default class Web3Instance{
     }
   }
 
-  public getMyAddress():string{
-    return this.myAddress as string
-  }
 
   public async createContractInterface(){
     const abi = Contract
-    const contact_address = "0xEcb5f82Aa5B07e6420b0acc58A6843F4eb2Bc97a"
+    const contact_address = "0x425493f30662deB8722ca13DBf265E9a9cfC2CC2"
     this.nftTextureContract = new this.web3.eth.Contract(abi, contact_address)
 
     this.retrieveTokenURI()
@@ -75,6 +72,10 @@ export default class Web3Instance{
     console.log(_url)
     console.log(this.myAddress)
     this.nftTextureContract.methods.createCollectible(_url).send({from: this.myAddress, value:0})
+  }
+
+  public getMyAddress():string{
+    return this.myAddress as string
   }
 
   public async retrieveTokenURI(){
