@@ -46,15 +46,20 @@ disconnectButton?.addEventListener("click", async(e) => {
 
 
 
+
 submit?.addEventListener("click", async(e) => {
     e.preventDefault()
     console.log(formInp)
 
-    formInp.creator = 'me'
+    
 
     const imgSize = (formInp.base64!.length * (3/4)) - 2
 
-    if(imgSize < 20000){
+    if(web3instance.myAddress){
+
+        formInp.creator = web3instance.getMyAddress()
+
+        if(imgSize < 20000){
         const rawRes = await fetch('http://localhost:3000/mint', {
             method: 'POST',
             headers: {
@@ -63,12 +68,19 @@ submit?.addEventListener("click", async(e) => {
             },
             body: JSON.stringify(formInp)
         })
+
+        const json = await rawRes.json()
+        console.log(json)
+        
+        web3instance.mint(json.response)
+
+
+    }else{
+        console.log("Connect wallet!")
+    }
     }
 
-    console.log(imgSize)
 
-    // const inputData:string = input?.value as string
-    // web3instance.mint(inputData)
 
 })
 
@@ -77,6 +89,7 @@ connectButton?.addEventListener("click", async(e) => {
     await web3instance.connectWallet()
     web3 = web3instance.get()
     web3instance.createContractInterface()
+
 
     
 

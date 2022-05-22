@@ -98,12 +98,24 @@ a:visited{
 }
 
 /* -------- page content ------ */
+
+#readmore-title{
+    position: absolute;
+    top: 0;
+    font-size: 2em;
+}
 .readmore-text{
     font-size: 1.5em;
     color: white;
     text-align:center;
+    font-weight: 400;
+    word-wrap: break-word;
 }
 #readmore-text-container{
+    position: absolute;
+    width: 40vw;
+    top: 15vh;
+    line-height: 180%;
 }
 
 #wrapper-main{
@@ -115,15 +127,16 @@ a:visited{
     align-items: center;
 }
 #content-main{
+    top: 10vh;
+    bottom: 10vh;
+    background-color: #202124;
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    height: 100vh;
+    height: 80vh;
     width: 50vw;
 }
-#readmore-title{
-    position: absolute;
-    top: 6vh;
-    font-size: 2em;
-}
+/* h3{
+} */
+

@@ -76,7 +76,7 @@
 		"inputs": [
 			{
 				"internalType": "string",
-				"name": "tokenURI",
+				"name": "_tokenURI",
 				"type": "string"
 			}
 		],
@@ -222,19 +222,6 @@
 				"internalType": "uint256",
 				"name": "",
 				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "baseURI",
-		"outputs": [
-			{
-				"internalType": "string",
-				"name": "",
-				"type": "string"
 			}
 		],
 		"stateMutability": "view",
