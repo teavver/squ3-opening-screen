@@ -189,11 +189,11 @@ h1{
     cursor: pointer;
 }
 #connected_address{
-    margin:0;
+    margin-top: 1vh;
     padding:0;
     position:absolute;
     top: 100%;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 .hidden{
     visibility:hidden;
@@ -203,9 +203,15 @@ h1{
     row-gap: 2vh;
 }
 .nftFormName{
- margin:0;
- padding:0;
- font-size: 1.5rem;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:0;
+    padding:0;
+    font-size: 1.5rem;   
+}
+#submit{
+    cursor: pointer;
 }
 #output{
     margin-left: 30%;

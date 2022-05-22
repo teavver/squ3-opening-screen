@@ -181,7 +181,7 @@ a:visited{
     position:absolute;
     height: 48px;
     width: 48px;
-    left: 49vw;
+    left: 48.4vw;
     top: 90vh;
 }
 
@@ -212,26 +212,34 @@ a:visited{
 }
 #page2title{
     text-shadow: 2px 2px #2b2b2b;
-    left: 5vw;
     font-weight: bold;
+    font-size: 48px;
+    color: white;
+    z-index:3;
+    left: 5vw;
     padding:0;
     margin:0;
     position: absolute;
     top: 20vh;
-    bottom: 25vh;
+    bottom: 70vh;
     width: 50%;
-    font-size: 48px;
-    color: white;
-    z-index:3;
 }
+/* #page2textCtn{
+    display: flex;
+    margin-left: 5vw;
+    margin-top: 20vh;
+    margin-bottom: 30vh;
+    width: 50vw;
+} */
 .page2maintext{
-    text-shadow: 4px 4px #2b2b2b;
+    line-height: 110%;
+    /* text-shadow: 4px 4px #2b2b2b; */
     left: 5vw;
     padding:0;
     margin:0;
     position: absolute;
-    top: 30vh;
-    bottom: 25vh;
+    top: 35vh;
+    bottom: 45vh;
     width: 50%;
     height: auto;
     font-size: 40px;
@@ -239,13 +247,14 @@ a:visited{
     z-index:3;
 }
 .page2subtext{
-    text-shadow: 4px 4px #2b2b2b;
+    line-height: 125%;
+    /* text-shadow: 4px 4px #2b2b2b; */  
     left: 5vw;
     padding:0;
     margin:0;
     position: absolute;
-    top: 50vh;
-    bottom: 25vh;
+    top: 55vh;
+    bottom: 30vh;
     width: 50%;
     height: auto;
     font-size: 30px;
@@ -259,6 +268,7 @@ a:visited{
 #page3main{
     pointer-events:none;
     margin-top: 100vh;
+    height: 100vh;
     font-size:0;
 }
 #page3bgDiv{
@@ -287,13 +297,18 @@ a:visited{
 }
 #page3h1{
     text-shadow: 2px 2px #2b2b2b;
-    left: 2%;
-    padding:0;
-    margin:0;
+    left: 10vw;
     position: absolute;
     font-size: 40px;
     color: white;
     z-index:3;
+}
+#portal-img{
+    z-index: 20;
+    position:absolute;
+    top:50vh;
+    left: 50vw;
+    transform: scale(4)
 }
 /* #squ3{
     z-index: 1000;

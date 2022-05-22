@@ -104,13 +104,18 @@ a:visited{
     color: white;
 }
 /* ---------- marketplace-items ------*/
+.grid-item{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
 .grid-item-img{
     display: grid;
     height: 128px;
 }
 .marketplace-preview-img{
     padding: 4px 4px 4px 4px;
-    background-color: #202124;
+    background-color: #28292c;
     height: 120px;
     width: 120px;
     align-self: center;
@@ -132,10 +137,12 @@ a:visited{
     font-family: 'pixel_operatorregular';
     font-size: 1.5em;
     width: 200px;
-    height: 36px;
+    height: 32px;
     color: white;
     background-color: #1e3799;
     border:none;
+    border-bottom: 4px solid #0c2461;
+    cursor: pointer;
     
 }
 .grid-item-priceCtn{
@@ -147,6 +154,10 @@ a:visited{
 .grid-item-priceText{
     font-size: 26px;
 }
+.grid-item-template-text-number{
+    font-size: 3em;
+}
+
 
 
 /* ---------- GRID LAYOUT ---------- */
