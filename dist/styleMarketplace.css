@@ -109,6 +109,8 @@ a:visited{
     height: 128px;
 }
 .marketplace-preview-img{
+    padding: 4px 4px 4px 4px;
+    background-color: #202124;
     height: 120px;
     width: 120px;
     align-self: center;
@@ -127,8 +129,14 @@ a:visited{
     height: 42px;
 }
 .grid-item-button{
+    font-family: 'pixel_operatorregular';
+    font-size: 1.5em;
     width: 200px;
     height: 36px;
+    color: white;
+    background-color: #1e3799;
+    border:none;
+    
 }
 .grid-item-priceCtn{
     display: flex;
