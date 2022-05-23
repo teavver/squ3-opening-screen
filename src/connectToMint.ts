@@ -60,7 +60,7 @@ submit?.addEventListener("click", async(e) => {
         formInp.creator = web3instance.getMyAddress()
 
         if(imgSize < 20000){
-        const rawRes = await fetch('http://localhost:3000/mint', {
+        const rawRes = await fetch('https://squ3back.herokuapp.com/mint', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',

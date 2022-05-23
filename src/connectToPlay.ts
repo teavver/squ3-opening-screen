@@ -14,13 +14,14 @@ const playButton: HTMLElement | null = document.querySelector("#playbutton")
 
 
 playButton?.addEventListener("click", async(e) => {
-        window.location.href = 'http://127.0.0.1:3000/dist/index.html'
+        
 })
 
 connectButton?.addEventListener("click", async(e) => {
-    await web3instance.connectWallet()
-    web3 = web3instance.get()
-    web3instance.createContractInterface()
+    window.location.href = 'https://squ3back.herokuapp.com/'
+    // await web3instance.connectWallet()
+    // web3 = web3instance.get()
+    // web3instance.createContractInterface()
     
 
     // web3instance.retrieveTokenURI()
