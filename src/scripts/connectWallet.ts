@@ -1,5 +1,5 @@
-// @ts-ignore
-import Web3 from 'web3/dist/web3.min.js'
+import Web3 from 'web3'
+import { AbiItem } from 'web3-utils'
 import Contract from '../contract_data/ABI_NFT.json'
 
 declare global {
@@ -12,7 +12,7 @@ const {ethereum} = window
 
 export default class Web3Instance{
 
-  web3:Web3
+  web3:Web3 = new Web3(ethereum)
   networkId:number = 0
   nftTextureContract:any
   myAddress:string | null = ''
@@ -63,7 +63,7 @@ export default class Web3Instance{
   public async createContractInterface(){
     const abi = Contract
     const contact_address = "0x425493f30662deB8722ca13DBf265E9a9cfC2CC2"
-    this.nftTextureContract = new this.web3.eth.Contract(abi, contact_address)
+    this.nftTextureContract = new this.web3.eth.Contract(abi as AbiItem[], contact_address)
 
     this.retrieveTokenURI()
   }

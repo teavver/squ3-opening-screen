@@ -12,8 +12,8 @@ body, html {
   }
 @font-face {
     font-family: 'pixel_operatorregular';
-    src: url('./fonts/pixeloperator-webfont.woff2') format('woff2'),
-         url('./fonts/pixeloperator-webfont.woff') format('woff');
+    src: url('../fonts/pixeloperator-webfont.woff2') format('woff2'),
+         url('../fonts/pixeloperator-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     color: rgb(255, 255, 255);
