@@ -4,6 +4,23 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title template
-    body 
-        include includes/nav.pug
+        link(rel="stylesheet", href="/src/styles/styleIndex.scss")
+        script(defer type="module" src="./scripts/main.ts")
+        title Home Page | Squ3
+    body
+        #header
+            #navbar.list
+                a#li_home(href="#") Texture Manager
+                a#li_game(href="#") Squ3
+                a#li_play(href="#") Play
+                a#li_marketplace(href="#") Marketplace
+                a#li_readmore(href="#") Read More
+    #wrapper-main
+        #play-ctn 
+            a#play-btn(href="#") 
+                #page1main
+        #page1-arrowDiv
+            a(href='#')
+                img#page1-arrow(src='./assets/page1-arrow.png')
+        #page1-bgDiv
+            img#page1bgImg(src='./assets/page1-bg-new.png' alt='')

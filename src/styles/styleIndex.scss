@@ -1,0 +1,16 @@
+@import './colors';
+@import './core';
+@import './page-anim';
+@import './navbar';
+@import './index-play-button';
+@import './index-page1';
+
+@include core();
+@include page-anim();
+@include navbar();
+
+
+
+
+
+

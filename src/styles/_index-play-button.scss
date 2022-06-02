@@ -1,0 +1,32 @@
+.disable-click{
+    pointer-events: none;
+}
+
+#play-ctn{
+    z-index: 1;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+    width: 100%;
+    height: 100%;
+}
+
+#play-btn{
+    transform:scale(0.8);
+    background: url(../assets/play-btn1.png) no-repeat;
+    z-index: 10;
+    top: 30%;
+    width: 480px;
+    height: 240px;
+    position: fixed;
+    background-size:cover;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    color: black;
+}
+
+#play-btn:active{
+    background: url(../assets/play-btn2.png);
+}

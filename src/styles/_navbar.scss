@@ -1,0 +1,59 @@
+@mixin navbar {
+    #header {
+        z-index: 1001;
+        min-width: 640px;
+        display: grid;
+        justify-content: center; 
+        align-items: center;
+        width: 100vw;
+        height: 36px;
+        position: fixed;
+        top: 0;
+        background-color: #282C2F;
+        border-bottom: 4px solid #202124;
+    }
+    #navbar {
+        display:inline;
+        width:100vw;
+        overflow:hidden;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    .list {
+        width: 100vw;
+        color: white;
+    }
+    #li_home{
+        margin-left:2%;
+        float:left;
+    }
+    #li_game{
+        float: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    #li_play{
+        margin-right:2%;
+        float:right;
+    }
+    #li_marketplace{
+        margin-left: 14%;
+        float:none;
+    }
+    #li_readmore{
+        float:right;
+        margin-right: 20%;
+    }
+    a{
+        font-size: 1.5em;
+    }
+    a:link {
+        color: white;
+    }
+    a:visited{
+        color: white;
+    }
+}
