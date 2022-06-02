@@ -4,13 +4,8 @@
 @import './navbar';
 @import './index-play-button';
 @import './index-page1';
+@import './index-page2';
 
 @include core();
 @include page-anim();
 @include navbar();
-
-
-
-
-
-

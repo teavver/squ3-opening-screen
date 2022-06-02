@@ -1,0 +1,94 @@
+#page2main{
+    font-size:0;
+}
+#page2-bgDiv{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    padding:0;
+}
+#page2bgImg{
+    z-index:1;
+    pointer-events:none;
+    position:absolute;
+    height: 100vh;
+    width: 100vw;
+}
+#content2-ctn{
+    display: flex;
+    position:absolute;
+    height: 100%;
+    width: 100%;
+}
+#page2title{
+    text-shadow: 4px 4px rgb(17, 17, 17);
+    font-weight: bold;
+    font-size: 48px;
+    color: white;
+    z-index:3;
+    left: 5vw;
+    padding:0;
+    margin:0;
+    position: absolute;
+    top: 24vh;
+    bottom: 70vh;
+    width: 50%;
+}
+/* #page2textCtn{
+    display: flex;
+    margin-left: 5vw;
+    margin-top: 20vh;
+    margin-bottom: 30vh;
+    width: 50vw;
+} */
+.page2maintext{
+    line-height: 110%;
+    text-shadow: 4px 4px rgb(17, 17, 17);
+    left: 5vw;
+    padding:0;
+    margin:0;
+    position: absolute;
+    top: 35vh;
+    bottom: 45vh;
+    width: 50%;
+    height: auto;
+    font-size: 40px;
+    color: white;
+    z-index:3;
+}
+.page2subtext{
+    line-height: 125%;
+    text-shadow: 4px 4px rgb(17, 17, 17);
+    left: 5vw;
+    padding:0;
+    margin:0;
+    position: absolute;
+    top: 55vh;
+    bottom: 30vh;
+    width: 50%;
+    height: auto;
+    font-size: 30px;
+    color: white;
+    z-index:3;
+}
+#nft-image-1{
+    transform:scale(0.2);
+    position:absolute;
+    top: 4vh;
+    left: 80vw;
+    z-index: 3;
+}
+#nft-image-2{
+    transform:scale(0.2);
+    position:absolute;
+    top: 38vh;
+    left: 62vw;
+    z-index:3;
+}
+#nft-image-3{
+    transform:scale(0.2);
+    position:absolute;
+    top: 64vh;
+    left: 82vw;
+    z-index:3;
+}
