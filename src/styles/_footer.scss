@@ -1,0 +1,51 @@
+.footer {
+    z-index: 31;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 140px;
+    background-color: #202124;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#footer-main-content{
+    width: 90%;
+    height: 80%;
+}
+#footer-main-logo{
+    top: 30%;
+    position: absolute;
+}
+#footer-small-logo{
+    height: 48px;
+    width: 128px;
+}
+#footer-end-content{
+    z-index: 32;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 32px;
+    background-color: #0f1011;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#trademark2022{
+    padding-left: 1.5vw;
+    padding-right: 1vw;
+    margin: 0;
+}
+.footer-end-list{
+    padding-right: 1vw;
+    font-size: 16px;
+    text-decoration: none;
+    list-style: none
+}
