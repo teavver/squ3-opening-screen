@@ -1,54 +1,56 @@
 doctype html
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(http-equiv="X-UA-Compatible", content="IE=edge")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        link(rel="stylesheet", href="/src/styles/styleIndex.scss")
-        script(defer type="module" src="./scripts/main.ts")
-        title Home Page | Squ3
-    body
-        #header
-            #navbar.list
-                a#li_home(href="") Texture Manager
-                a#li_game(href="") Squ3
-                a#li_play(href="") Play
-                a#li_marketplace(href="") Marketplace
-                a#li_readmore(href="") Read More
-        #wrapper-main
-            #play-ctn 
-                a#play-btn(href="") 
-                    #page1main
-                #page1-arrowDiv
-                    a(href='#content2-ctn')
-                    img#page1-arrow(src='./assets/page1-arrow.png')
-                #page1-bgDiv
-                    img#page1bgImg(src='./assets/page1-bg-new.png' alt='')
-            #page2main
-                #page2-bgDiv
-                    img#page2bgImg(src='./assets/page2-bg.png' alt='')
-                #content2-ctn
-                    img#nft-image-1(src='./assets/nft-image-1v2.png')
-                    img#nft-image-2(src='./assets/nft-image-2v2.png')
-                    img#nft-image-3(src='./assets/nft-image-3v2.png')
-                    h1#page2title Make your own NFTs
-                    p.page2maintext
-                        | Our game is based around custom textures. With the help of our upcoming Texture Creator, 
-                        | you&apos;ll be able to not only upload your own textures, but create them in-game.
-                    p.page2subtext
-                        | Freedom is key. That&apos;s why we want to let the players choose the direction the game is going to go.
-                        | Head over to the Texture manager in the top-left corner to upload your own, custom player spritesheet :)
-            #page3main
-                #page3bgDiv
-                    img#page3bgImg(src='./assets/page3-bg.png' alt='')
-                    #content3-ctn
-                        #page3mainText
-                            h1#page3h1 Explore the Marketplace
-                            h2#page3h2
-                                | List your own textures for sale or buy from others. The only limit is your imagination.
-                            #page3-frontmans-div
-                                        img#frontmans-img(src='./assets/frontmans-highres.png' alt='')
-            #footer-end-content
-                p#trademark2022.footer-end-list Squ3 &copy; 2022
-                li.footer-end-list
-                    a.footer-end-list(href='#') Back to top
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='./styles/styleIndex.scss')
+  link(rel='icon' href='./assets/icon.png')
+  script(defer='' type='module' src='./scripts/main.ts')
+  title Home Page | Squ3
+#header
+  #navbar.list
+    a#li_home(href='#') Texture Manager
+    a#li_game(href='#') Squ3
+    a#li_play(href='#') Play
+    a#li_marketplace(href='#') Marketplace
+    a#li_readmore(href='#') Read More
+#wrapper-main
+  #play-ctn
+    a#play-btn(href='#')
+  // ------------------page1--------------------
+  #page1main
+    #page1-arrowDiv
+      a(href='#content2-ctn')
+        img#page1-arrow(src='./assets/page1-arrow.png')
+    #page1-bgDiv
+      img#page1bgImg(src='assets/page1-bg-new.png' alt='')
+  #page2main
+    #page2-bgDiv
+      img#page2bgImg(src='./assets/page2-bg.png' alt='')
+    #content2-ctn
+      img#nft-image-1(src='./assets/nft-image-1v2.png')
+      img#nft-image-2(src='./assets/nft-image-2v2.png')
+      img#nft-image-3(src='./assets/nft-image-3v2.png')
+      // <div id="page2textCtn">
+      h1#page2title Make your own NFTs
+      p.page2maintext
+        | Our game is based around custom textures. With the help of our upcoming Texture Creator, you&apos;ll be able to not only upload your own textures, but create them in-game.
+      p.page2subtext
+        | Freedom is key. That&apos;s why we want to let the players choose the direction the game is going to go.
+        | Head over to the Texture manager in the top-left corner to upload your own, custom player spritesheet :)
+      // </div>
+  // ------------------page3--------------------
+  #page3main
+    #page3bgDiv
+      img#page3bgImg(src='./assets/page3-bg.png' alt='')
+    #content3-ctn
+      #page3mainText
+        h1#page3h1 Explore the Marketplace
+        h2#page3h2
+          | List your own textures for sale or buy from others. The only limit is your imagination.
+        #page3-frontmans-div
+          img#frontmans-img(src='./assets/frontmans-highres.png' alt='')
+  #footer-end-content
+    p#trademark2022.footer-end-list Squ3 &copy; 2022
+    li.footer-end-list
+      a.footer-end-list(href='#') Back to top

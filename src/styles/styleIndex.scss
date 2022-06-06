@@ -8,6 +8,7 @@
 @import './index-page2';
 @import './index-page3';
 @import './footer';
+@import './mixins';
 
 @include core();
 @include page-anim();

@@ -22,7 +22,7 @@
     }
     .list {
         width: 100vw;
-        color: white;
+        color: $dtext;
     }
     #li_home{
         margin-left:2%;
@@ -51,9 +51,9 @@
         font-size: 1.5em;
     }
     a:link {
-        color: white;
+        color: $dtext;
     }
     a:visited{
-        color: white;
+        color: $dtext;
     }
 }

@@ -1,37 +1,21 @@
+@import './mixins';
+
 #page1main{
     font-size:0;
 }
 #page1bgImg {
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    pointer-events:none;
+    @include no-pointer-events();
+    @include fullscreen();
+    @include blur(5px);
     z-index:0;
-    height: 100vh;
-    width: 100vw;
-
-    filter: blur(4px);
-    -webkit-filter: blur(4px);
 }
 #page1bgDiv{
     z-index:-1;
-    pointer-events:none;
+    @include no-pointer-events();
 }
 #page1-arrowDiv{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    position:relative;
+    @include flex-center();
 }
 #page1-arrow{
-    padding: 6px;
-    display: block;
-    text-align:center;
-    z-index: 5;
-    position:absolute;
-    height: 48px;
-    width: 48px;
-    left: 48.4vw;
-    top: 90vh;
+    top: 93vh;
 }

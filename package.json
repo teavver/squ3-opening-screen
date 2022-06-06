@@ -17,6 +17,7 @@
     "@parcel/transformer-pug": "2.6.0",
     "@parcel/transformer-sass": "2.6.0",
     "assert": "^2.0.0",
+    "events": "^3.3.0",
     "https-browserify": "^1.0.0",
     "os-browserify": "^0.3.0",
     "parcel": "^2.6.0",
