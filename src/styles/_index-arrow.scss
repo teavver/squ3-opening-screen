@@ -1,11 +1,11 @@
+@import './mixins';
+
 #page1-arrowDiv{
-    display:flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center();
     position:relative;
 }
 #page1-arrow{
-    padding: 6px;
+    padding: 12px;
     display: block;
     text-align:center;
     z-index: 5;
@@ -13,5 +13,5 @@
     height: 48px;
     width: 48px;
     left: 48.4vw;
-    top: 90vh;
+    top: 92vh;
 }

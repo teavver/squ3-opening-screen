@@ -111,80 +111,75 @@
 
 #page2-bgDiv {
   position: absolute;
-  height: 100vh;
   width: 100vw;
+  height: 100vh;
   padding: 0;
 }
 
 #page2bgImg {
   z-index: 1;
-  pointer-events: none;
   position: absolute;
-  height: 100vh;
   width: 100vw;
+  height: 100vh;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  pointer-events: none;
 }
 
 #content2-ctn {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: absolute;
-  height: 100%;
-  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #page2title {
-  text-shadow: 4px 4px #111111;
-  font-weight: bold;
-  font-size: 48px;
-  color: white;
+  text-shadow: 3px 3px #111111;
+  font-size: 64px;
   z-index: 3;
   left: 5vw;
-  padding: 0;
-  margin: 0;
+  top: 8vh;
   position: absolute;
-  top: 24vh;
-  bottom: 70vh;
-  width: 50%;
+  font-weight: bold;
+  color: green;
+  font-size: clamp(32px, 4vw, 64px);
 }
 
-/* #page2textCtn{
-    display: flex;
-    margin-left: 5vw;
-    margin-top: 20vh;
-    margin-bottom: 30vh;
-    width: 50vw;
-} */
 .page2maintext {
-  line-height: 110%;
-  text-shadow: 4px 4px #111111;
-  left: 5vw;
-  padding: 0;
-  margin: 0;
-  position: absolute;
-  top: 35vh;
-  bottom: 45vh;
-  width: 50%;
-  height: auto;
-  font-size: 40px;
-  color: white;
+  text-shadow: 3px 3px #111111;
+  font-size: 42px;
   z-index: 3;
+  left: 5vw;
+  top: 26vh;
+  position: absolute;
+  font-weight: normal;
+  color: green;
+  width: 40%;
+  line-height: 0.9em;
+  font-size: clamp(16px, 2vw, 42px);
 }
 
 .page2subtext {
-  line-height: 125%;
-  text-shadow: 4px 4px #111111;
-  left: 5vw;
-  padding: 0;
-  margin: 0;
-  position: absolute;
-  top: 55vh;
-  bottom: 30vh;
-  width: 50%;
-  height: auto;
-  font-size: 30px;
-  color: white;
+  text-shadow: 3px 3px #111111;
+  font-size: 42px;
   z-index: 3;
+  left: 5vw;
+  top: 46vh;
+  position: absolute;
+  font-weight: normal;
+  color: green;
+  width: 40%;
+  font-size: clamp(16px, 2vw, 42px);
 }
 
 #nft-image-1 {
@@ -400,7 +395,7 @@ body, html {
   src: url("../fonts/pixeloperator-webfont.woff2") format("woff2"), url("../fonts/pixeloperator-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
-  color: red;
+  color: green;
 }
 
 #wrapper-main {
@@ -460,7 +455,7 @@ body, html {
 
 .list {
   width: 100vw;
-  color: red;
+  color: green;
 }
 
 #li_home {
@@ -497,10 +492,10 @@ a {
 }
 
 a:link {
-  color: red;
+  color: green;
 }
 
 a:visited {
-  color: red;
+  color: green;
 }
 /*# sourceMappingURL=styleIndex.css.map */

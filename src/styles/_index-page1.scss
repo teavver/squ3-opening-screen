@@ -13,9 +13,3 @@
     z-index:-1;
     @include no-pointer-events();
 }
-#page1-arrowDiv{
-    @include flex-center();
-}
-#page1-arrow{
-    top: 93vh;
-}
