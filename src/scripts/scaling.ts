@@ -41,7 +41,6 @@ export default function scalingOnScroll(){
         const x = window.scrollY / 1000;
 
         if(window.scrollY >= 1000){
-          nft_1!.style.transform = `scale($0.38)`
           play_btn!.style.transform = `scale(0)`
           // document.getElementById('disconnect')?.classList.remove('hidden');
         }
@@ -60,13 +59,5 @@ export default function scalingOnScroll(){
           nft_3!.style.transform = `scale(${0.2 + x/2})`;
         }
       };
-
-
-    //   const nft1: HTMLElement | null = document.getElementById('nft-image-1')
-    
-    // window.onscroll = (event) => {
-    //     const nftscroll1 = window.scrollY / 1000;
-    //     nft1!.style.transform = `scale(${0.8 + (nftscroll1/1.5)})`;
-    //   };
 }
 
