@@ -1,54 +1,57 @@
+@import './mixins';
 @mixin navbar {
     #header {
-        z-index: 1001;
+        // box-sizing: border-box;
+        z-index: 999;
         min-width: 640px;
-        display: grid;
-        justify-content: center; 
-        align-items: center;
-        width: 100vw;
+        @include flex-center();
+        // width: 100vw;
         height: 36px;
         position: fixed;
-        top: 0;
+        // top: 0;
         background-color: #282C2F;
         border-bottom: 4px solid #202124;
+        box-shadow: 0 10px 10px 0 rgb(0 0 0 / 30%), 0 6px 20px 0 rgb(0 0 0 / 19%);
     }
     #navbar {
         display:inline;
         width:100vw;
         overflow:hidden;
-        list-style-type: none;
         margin: 0;
         padding: 0;
+    }
+    ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include nomp();
     }
     .list {
         width: 100vw;
         color: $dtext;
     }
-    #li_home{
-        margin-left:2%;
-        float:left;
+    #li_texturemanager{
+        margin-left: 5%;
     }
-    #li_game{
-        float: none;
+    #li_marketplace{
+        margin-right: 25%;
+    }
+    #li_home{
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
     }
-    #li_play{
-        margin-right:2%;
-        float:right;
-    }
-    #li_marketplace{
-        margin-left: 14%;
-        float:none;
-    }
     #li_readmore{
-        float:right;
-        margin-right: 20%;
+        
+    }
+    #li_play{
+        margin-right: 5%;
     }
     a{
-        font-size: 1.5em;
+        font-size: 1.25em;
+        font-weight: bold;
+        text-decoration: none !important;
     }
     a:link {
         color: $dtext;
