@@ -7,3 +7,55 @@
 @include core();
 @include navbar();
 @include page-anim();
+
+h1{
+    font-size: 36px;
+}
+.mainButton{
+    position: $a;
+    z-index: 100;
+    @include flex-center();
+    width: 100%;
+    top: 50vh;
+}
+#connect{
+    z-index: 100;
+    position:$a;
+    font-family : inherit;
+    font-size: 1.5em;
+    border:none;
+    background-color:  $blue;
+    border-bottom: 8px solid $blue-dark;
+    color: $dtext;
+    // new colorway?
+    // background-color: #ffcc82;
+    // border-bottom: 8px solid #ecb96e;
+    // color:#282C2F;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+.hidden{
+    visibility:hidden;
+}
+#mainButton{
+    @include fullscreen();
+    @include flex-center();
+}
+#playbutton{
+    z-index: 101;
+    position:$a;
+    font-family : inherit;
+    font-size: 3em;
+    border:none;
+    background-color: $blue;
+    border-bottom: 8px solid $blue-dark;
+    color: $dtext;
+    padding: 15px 100px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}

@@ -5,7 +5,12 @@ html(lang="en")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         link(rel='stylesheet' href='./styles/stylePlay.scss')
+        script(defer='' type='module' src='./scripts/connectToPlay.ts')
         title Play | Squ3
     body 
 include ./_mixins.pug
 +header
+#wrapper-main
+  .mainButton
+    button#playbutton.hidden PLAY
+    button#connect Connect Wallet

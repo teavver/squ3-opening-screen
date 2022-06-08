@@ -7,3 +7,118 @@
 @include core();
 @include navbar();
 @include page-anim();
+
+#wrapper-main{
+    @include fullscreen();
+    @include flex-center();
+}
+
+.grid-item{
+    @include flex-center();
+}
+.grid-item-img{
+    display: grid;
+    height: 128px;
+}
+.marketplace-preview-img{
+    background-color: #28292c;
+    height: 120px;
+    width: 120px;
+    align-self: center;
+    justify-self: center;
+}
+.grid-item-title{
+    @include flex-center();
+    font-size: 1.5em;
+    padding-top: 2px;
+    width: 240px;
+}
+.grid-item-buyCtn{
+    @include flex-center();
+    height: 42px;
+}
+.grid-item-button{
+    font-family: 'pixel_operatorregular';
+    font-size: 1.25em;
+    font-weight: bold;
+    width: 200px;
+    height: 32px;
+    color: white;
+    background-color: $blue;
+    border:none;
+    border-bottom: 4px solid $blue-dark;
+    cursor: pointer;
+    
+}
+.grid-item-priceCtn{
+    @include flex-center();
+    height: 30px;
+}
+.grid-item-priceText{
+    font-size: 26px;
+}
+.grid-item-template-text-number{
+    font-size: 3em;
+}
+
+
+
+/* ---------- GRID LAYOUT ---------- */
+#marketplace-container-border{
+    display: flex;
+    padding: 1.5vh 2vw 1.5vh 2vw;
+    z-index: 10000;
+    background-color: $main-dark;
+}
+#marketplace-container-title{
+    @include flex-center();
+    width: 100%;
+    margin-top: 5vh;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    background-color:$blue;
+    // font-weight: bold;
+}
+.marketplace-ctn-text{
+    color: $dtext;
+    font-size: 2em;
+    margin: 0;
+    /* padding-top: 0.5vh;
+    padding-bottom: 0.5vh; */
+    
+}
+#marketplace-container{
+    width: 60vw;
+    height: 80vh;
+    /* z-index: 1000; */
+    /* position:absolute; */
+    /* background: white; */
+}
+
+
+#grid-container{
+    @include nomp();
+    /* margin-top: 40px; */
+    background-color: $main-dark;
+    /* padding-right: 2vw; */
+    /* padding-left: 2vw; */
+    /* padding-top: 6vh; */
+    /* padding-bottom: 6vh; */
+    height: 80vh;
+    color: $dtext;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 2vh 2vw;
+    overflow: auto;
+}
+.grid-item{
+    background-color: $main-light;
+    display:inline-grid;
+    height: 256px;
+    width: 256px;
+}
+p{
+    font-size: 1em;
+    padding: 0;
+    margin: 0;
+}

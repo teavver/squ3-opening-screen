@@ -1,15 +1,15 @@
 @import './mixins';
 
 .footer {
-    z-index: 31;
-    position: relative;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 140px;
-    background-color: #202124;
-    text-align: center;
-    @include flex-center();
+    // z-index: 31;
+    // position: relative;
+    // left: 0;
+    // bottom: 0;
+    // width: 100%;
+    // background-color: #202124;
+    // text-align: center;
+    // @include flex-center();
+    display: none;
 }
 #footer-main-content{
     display: none;
@@ -21,26 +21,27 @@
     display: none;
 }
 #footer-end-content{
-    z-index: 32;
-    position: relative;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 32px;
+    // z-index: 32;
+    // position: relative;
+    // left: 0;
+    // bottom: 0;
+    // width: 100%;
+    height: 38px;
     background-color: #0f1011;
     color: $dtext;
-    text-align: center;
+    // text-align: center;
     @include flex-center();
 }
 #trademark2022{
-    @include nomp();
+    // @include nomp();
     padding-left: 1.5vw;
     padding-right: 0.25vw;
 }
 .footer-end-list{
+    font-weight: normal;
     padding-left: 0.25vw;
     padding-right: 1vw;
     font-size: 16px;
-    text-decoration: none;
+    text-decoration: underline;
     list-style: none
 }

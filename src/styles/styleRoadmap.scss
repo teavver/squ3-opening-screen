@@ -7,3 +7,16 @@
 @include core();
 @include navbar();
 @include page-anim();
+
+#wrapper-main{
+    @include fullscreen();
+}
+#content-main{
+    padding-top: 5vh;
+    padding-left: 25vw;
+    padding-right: 25vw;
+    color: $dtext;
+}
+.center-text{
+    @include flex-center();
+}
