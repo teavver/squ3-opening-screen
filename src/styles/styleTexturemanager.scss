@@ -57,30 +57,37 @@
     color: $dtext;
     padding: 15px 32px;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    bottom: 10vh;
+    // text-decoration: none;
+    // display: inline-block;
+    bottom: 8vh;
     cursor: pointer;
 }
 #disconnect{
+    color: $dtext;
     z-index: 101;
     font-family : inherit;
+    position:absolute;
     font-size: 1.5em;
     border:none;
     background-color:  $blue;
     border-bottom: 8px solid $blue-dark;
-    color: $dtext;
     padding: 15px 32px;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
+    // text-decoration: none;
+    // display: inline-block;
+    bottom: 8vh;
     cursor: pointer;
 }
+// #address{
+//     @include flex-center();
+// }
 #connected_address{
-    margin-top: 1vh;
-    padding:0;
     position:absolute;
-    top: 100%;
+    text-align: center;
+    top: 15vh;
+    // transform:translateX(-25%);
+    // bottom: 80%;
+    // left: 48%;
     font-size: 1.5em;
 }
 .hidden{
