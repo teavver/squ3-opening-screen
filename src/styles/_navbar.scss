@@ -1,14 +1,14 @@
 @import './mixins';
+@import './colors';
 @mixin navbar {
     #header {
         // box-sizing: border-box;
         z-index: 999;
         min-width: 640px;
         @include flex-center();
-        // width: 100vw;
         height: 36px;
         position: fixed;
-        // top: 0;
+        top: 0;
         background-color: #282C2F;
         border-bottom: 4px solid #202124;
         box-shadow: 0 10px 10px 0 rgb(0 0 0 / 30%), 0 6px 20px 0 rgb(0 0 0 / 19%);
@@ -22,7 +22,7 @@
     }
     ul {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
         @include nomp();
     }
@@ -31,22 +31,19 @@
         color: $dtext;
     }
     #li_texturemanager{
-        margin-left: 5%;
+        @include nomp();
     }
     #li_marketplace{
-        margin-right: 25%;
+        @include nomp();
     }
     #li_home{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        margin-right: 5%;
     }
     #li_readmore{
-        
+        @include nomp();
     }
     #li_play{
-        margin-right: 5%;
+        @include nomp();
     }
     a{
         font-size: 1.25em;
@@ -58,5 +55,11 @@
     }
     a:visited{
         color: $dtext;
+    }
+    .navlink{
+        transition: transform .2s;
+    }
+    .navlink:hover{
+        transform: scale(1.1);
     }
 }

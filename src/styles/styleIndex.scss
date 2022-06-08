@@ -11,5 +11,5 @@
 @import './mixins';
 
 @include core();
-@include page-anim();
 @include navbar();
+@include page-anim();

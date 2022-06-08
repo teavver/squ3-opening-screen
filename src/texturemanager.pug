@@ -6,7 +6,31 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         link(rel='stylesheet' href='./styles/styleTexturemanager.scss')
         title Texture Manager | Squ3
-    body 
+        link(rel='icon' href='./assets/icon.png')
+        script(defer='' type='module' src='./scripts/connectToMint.ts')
+    body
 include ./_mixins.pug
 +header
-    h1 LMAO
+#wrapper-main
+  .mainButton
+    button#connect Connect Wallet
+    button#disconnect.hidden Disconnect Wallet
+    p#connected_address Address:
+  #Page
+    #page_content
+      #contractOutput
+      // <h1>Custom Spritesheet</h1>
+      #formDiv
+        form.nftForm(runat='server')
+          p.nftFormName Enter skin name:
+          input#txtName.nftForm(accept='text')
+          p.nftFormName Choose texture file:
+          //
+            <input class="nftForm" accept="image/*" type='file' id="img_preview" />
+            <p class="nftFormName"></p>
+          input#photo(type='file' accept='image/*')
+          img#output(onerror="this.style.display='none'" width='100' height='100')
+          input#submit.nftForm(type='submit' value='Submit')
+          #result
+      #previewDiv
+        #previewImg

@@ -1,0 +1,104 @@
+@import './navbar';
+@import './mixins';
+@import './core';
+@import './colors';
+@import './page-anim';
+
+@include core();
+@include navbar();
+@include page-anim();
+
+#Page{
+    position:$a;
+    @include fullscreen();
+}
+#page_content{
+    position:$a;
+    color: $dtext;
+    @include flex-center();
+    @include nomp();
+    left: 25vw;
+    right: 25vw;
+    height: 100vh;
+    width: 50vw;
+}
+#contractOutput{
+    @include nomp();
+    max-width: 360px;
+    max-height: 360px;
+}
+#formDiv{
+    top: 25vh;
+    padding: 20px;
+    position:$a;
+    background-color:  $blue;
+    border-bottom: 8px solid $blue-dark;
+}
+#wrapper-main{
+    position:$a;
+    @include fullscreen();
+    // background-color: #2D3436;
+}
+.mainButton{
+    @include flex-center();
+    z-index: 100;
+    width: 100%;
+    position: absolute;
+    top: 80vh;
+}
+#connect{
+    z-index: 100;
+    position:absolute;
+    font-family : inherit;
+    font-size: 1.5em;
+    border:none;
+    background-color:  $blue;
+    border-bottom: 8px solid $blue-dark;
+    color: $dtext;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    bottom: 10vh;
+    cursor: pointer;
+}
+#disconnect{
+    z-index: 101;
+    font-family : inherit;
+    font-size: 1.5em;
+    border:none;
+    background-color:  $blue;
+    border-bottom: 8px solid $blue-dark;
+    color: $dtext;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+#connected_address{
+    margin-top: 1vh;
+    padding:0;
+    position:absolute;
+    top: 100%;
+    font-size: 1.5em;
+}
+.hidden{
+    visibility:hidden;
+}
+.nftForm{
+    display:grid;
+    row-gap: 2vh;
+}
+.nftFormName{
+    @include flex-center();
+    @include nomp();
+    font-size: 1.5rem;
+}
+#submit{
+    cursor: pointer;
+}
+#output{
+    margin-left: 30%;
+    margin-right: 30%;
+}
